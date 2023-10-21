@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog profile</title>
+    <script>
+        // Define the profile information
+const profile = {
+    name: "Jahnavi",
+    profession: "Software Developer",
+    age: 18,
+    location: "Hanamkonda",
+    hobbies: ["Coding", "Gaming"],
+};
+
+// Define the blog content
+const blogContent = `
+<h1>My Profile Blog</h1>
+
+<p>Hey there! I'm ${profile.name}, a ${profile.age}-year-old ${profile.profession} based in ${profile.location}. I'm a passionate developer who loves creating innovative software solutions.</p>
+
+<p>When I'm not coding, you can usually find me exploring the great outdoors or diving into my favorite video games. I have a deep love for hiking and the thrill of reaching the summit of a challenging trail.</p>
+
+<p>As a software developer, I'm dedicated to continuous learning and staying up to date with the latest technologies. Building software that solves real-world problems and enhances people's lives is what I'm all about.</p>
+
+<h2>My Hobbies</h2>
+<ul>
+    <li>${profile.hobbies[0]}</li>
+    <li>${profile.hobbies[1]}</li>
+   
+</ul>
+
+<p>Thank you for visiting my profile blog. I'll be sharing more about my coding projects, travel adventures, and everything in between. Stay tuned for updates!</p>
+`;
+
+// Display the blog content in the console (you can use it in a web page as well)
+document.writeln(blogContent);
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCM and GCD</title>
+    <script>
+function findGCD(a, b)
+ {
+    if (b === 0) {
+        return a;
+    } else {
+        return findGCD(b, a % b);
+    }
+}
+// Function to find the LCM of two numbers using the GCD
+function findLCM(a, b) {
+    return (a * b) / findGCD(a, b);
+}
+// Read two numbers from the user
+let num1 = parseInt(prompt("Enter the first number:"));
+let num2 = parseInt(prompt("Enter the second number:"));
+// Calculate and display the GCD and LCM
+const gcd = findGCD(num1, num2);
+const lcm = findLCM(num1, num2);
+document.writeln(`The GCD of ${num1} and ${num2} is: ${gcd}`);
+document.writeln(`\nThe LCM of ${num1} and ${num2} is: ${lcm}`);
+    </script>
+</head>
+<body>
+</body>
+</html>

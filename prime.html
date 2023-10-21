@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+    <script>
+        function isPrime(number) {
+    if (number <= 1) {
+        return false; // Numbers less than or equal to 1 are not prime
+    } else if (number <= 3) {
+        return true; // 2 and 3 are prime
+    } else if (number % 2 === 0 || number % 3 === 0) {
+        return false; // Numbers divisible by 2 or 3 are not prime
+    }
+
+    // Check for prime by dividing the number by 6k +/- 1x
+    let i = 5;
+    while (i * i <= number) {
+        if (number % i === 0 || number % (i + 2) === 0) {
+            return false;
+        }
+        i += 6;
+    }
+
+    return true;
+}
+
+// Read a number from the user
+let number = parseInt(prompt("Enter a number:"));
+
+// Check if it's prime and display the result
+if (isPrime(number)) {
+   document.writeln(number + " is a prime number.");
+} else {
+    document.writeln(number + " is not a prime number.");
+}
+
+    </script>
+</head>
+<body>
+</body>
+</html>

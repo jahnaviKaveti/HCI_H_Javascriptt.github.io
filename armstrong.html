@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+    <script>
+        function isArmstrongNumber(number) {
+    // Convert the number to a string to count the number of digits
+    const numStr = number.toString();
+    const numDigits = numStr.length;
+
+    // Calculate the sum of the digits raised to the power of numDigits
+    let sum = 0;
+    for (let i = 0; i < numDigits; i++) {
+        const digit = parseInt(numStr[i]);
+        sum += Math.pow(digit, numDigits);
+    }
+
+    // Check if the sum is equal to the original number
+    return sum === number;
+}
+
+// Read a number from the user
+let number = parseInt(prompt("Enter a number:"));
+
+// Check if it's an Armstrong number and display the result
+if (isArmstrongNumber(number)) {
+   document.writeln(number + " is an Armstrong number.");
+} else {
+   document.writeln(number + " is not an Armstrong number.");
+}
+    </script>
+</head>
+<body>
+</body>
+</html>

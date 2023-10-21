@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br>
+
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber"><br>
+
+        <label for="pinCode">Pin Code:</label>
+        <input type="text" id="pinCode" name="pinCode"><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+            const phoneNumber = document.getElementById("phoneNumber").value;
+            const pinCode = document.getElementById("pinCode").value;
+
+            if (username.length < 8) {
+                alert("Username should be at least 8 characters.");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("Password should be at least 8 characters.");
+                return;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+
+            if (phoneNumber.length > 10) {
+                alert("Phone number should be at most 10 digits.");
+                return;
+            }
+
+            if (pinCode.length > 6) {
+                alert("Pin code should be at most 6 digits.");
+                return;
+            }
+            else
+            {
+                document.writeln("Welcome");
+            }
+            // If all validations pass, you can submit the form or perform other actions.
+            // document.getElementById("myForm").submit();
+        }
+    </script>
+</body>
+</html>

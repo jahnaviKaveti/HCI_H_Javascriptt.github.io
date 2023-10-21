@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest of three numbers</title>
+    <script>
+        // Read three numbers from the user
+let num1 = parseFloat(prompt("Enter the first number:"));
+let num2 = parseFloat(prompt("Enter the second number:"));
+let num3 = parseFloat(prompt("Enter the third number:"));
+
+// Check which number is the greatest
+if (num1 >= num2 && num1 >= num3) {
+    document.writeln("The greatest number is: " + num1);
+} else if (num2 >= num1 && num2 >= num3) {
+    document.writeln("The greatest number is: " + num2);
+} else {
+    document.writeln("The greatest number is: " + num3);
+}
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

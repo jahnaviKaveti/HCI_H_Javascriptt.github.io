@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Numbers</title>
+    <script>
+        function isPalindrome(number) {
+    const numStr = number.toString();
+    const reversedStr = numStr.split('').reverse().join('');
+    return numStr === reversedStr;
+}
+
+// Read a number from the user
+let number = parseInt(prompt("Enter a number:"));
+
+// Check if it's a palindrome and display the result
+if (isPalindrome(number)) {
+    document.writeln(number + " is a palindrome.");
+} else {
+    document.writeln(number + " is not a palindrome.");
+}
+    </script>
+</head>
+<body>
+</body>
+</html>
